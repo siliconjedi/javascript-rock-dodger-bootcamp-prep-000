@@ -83,13 +83,14 @@ function createRock(x) {
     // (use the comments below to guide you!)
     console.log(rock);
     rock.style.top += 2;
+
     /**
      * If a rock collides with the DODGER,
      * we should call endGame()
      */
     if (checkCollision(rock)){
-      endGame();
-    } else if (rock.top < 360) {
+      return endGame();
+    } else if (top < 360) {
       window.requestAnimationFrame(moveRock);
     } else {
       rock.remove();
